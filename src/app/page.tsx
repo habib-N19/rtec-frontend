@@ -1,103 +1,222 @@
-import Image from "next/image";
+"use client";
+
+import { HeroSection } from "@/features/hero/hero-section";
+import { DepartmentsSection } from "@/features/departments/departments-section";
+import { TeachersSection } from "@/features/teachers/teachers-section";
+import { AlumniSection } from "@/features/alumni/alumni-section";
+import { ClubsSection } from "@/features/clubs/clubs-section";
+import { ActivitiesSection } from "@/features/activities/activities-section";
+import { FAQSection } from "@/features/faq/faq-section";
+import {
+  BeakerIcon,
+  ShirtIcon,
+  ScissorsIcon,
+  Boxes
+} from "lucide-react";
+
+// Sample data
+const departments = [
+  {
+    icon: <BeakerIcon className="h-8 w-8" />,
+    title: "Wet Process Engineering",
+    description:
+      "Lorem Ipsum is placeholder text commonly used in design and development to mimic natural language content.",
+    href: "/departments/wet-process",
+  },
+  {
+    icon: <ShirtIcon className="h-8 w-8" />,
+    title: "Apparel Engineering",
+    description:
+      "Lorem Ipsum is placeholder text commonly used in design and development to mimic natural language content.",
+    href: "/departments/apparel",
+  },
+  {
+    icon: <ScissorsIcon className="h-8 w-8" />,
+    title: "Fabric Engineering",
+    description:
+      "Lorem Ipsum is placeholder text commonly used in design and development to mimic natural language content.",
+    href: "/departments/fabric",
+  },
+  {
+    icon: <Boxes className="h-8 w-8" />,
+    title: "Yarn Engineering",
+    description:
+      "Lorem Ipsum is placeholder text commonly used in design and development to mimic natural language content.",
+    href: "/departments/yarn",
+  },
+];
+
+const teachers = [
+  {
+    image: "/teachers/1.jpg",
+    name: "Md. Nahidur Rahman",
+    role: "Principal",
+  },
+  {
+    image: "/teachers/2.jpg",
+    name: "Dr. Md. Abdur Razzak",
+    role: "Head of Department",
+  },
+  {
+    image: "/teachers/3.jpg",
+    name: "Dr. Md. Kamrul Hasan",
+    role: "Professor",
+  },
+  {
+    image: "/teachers/4.jpg",
+    name: "Md. Shahadat Hossain",
+    role: "Associate Professor",
+  },
+];
+
+const alumni = [
+  {
+    image: "/alumni/1.jpg",
+    name: "Md. Emon",
+    role: "General Manager, ABC Textiles",
+  },
+  {
+    image: "/alumni/2.jpg",
+    name: "Md. Rashid",
+    role: "Production Manager, XYZ Garments",
+  },
+  {
+    image: "/alumni/3.jpg",
+    name: "Md. Karim",
+    role: "QC Manager, PQR Fabrics",
+  },
+];
+
+const activities = [
+  {
+    image: "/activities/1.jpg",
+    title: "Madok Shomrat Mamun er Kookirti !",
+    category: "Debate Club",
+    date: "December 17, 2024",
+  },
+  {
+    image: "/activities/2.jpg",
+    title: "Annual Cultural Program 2024",
+    category: "Cultural Club",
+    date: "December 20, 2024",
+  },
+  {
+    image: "/activities/3.jpg",
+    title: "Tech Fest 2024",
+    category: "Computer Club",
+    date: "December 25, 2024",
+  },
+];
+
+const faqs = [
+  {
+    question: "What is the admission process for the textile program?",
+    answer: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+  },
+  {
+    question: "Is there any entrance exam required for admission?",
+    answer: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+  },
+  {
+    question: "What subjects will I study in the textile program?",
+    answer: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+  },
+  {
+    question: "Are there any scholarships available for textile students?",
+    answer: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+  },
+  {
+    question: "Are there any internship opportunities during the program?",
+    answer: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+  },
+  {
+    question: "What facilities are available for textile students on campus?",
+    answer: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+  },
+];
+
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
+    <>
+      <main>
+        {/* Hero Section */}
+        <HeroSection
+          title="Welcome to Rangpur Textile Engineering College, Pirganj"
+          description="Lorem Ipsum is placeholder text commonly used in design and development to mimic natural language content. It helps designers focus on layout."
+          backgroundImage="/images/hero.jpg"
+          infoCard={{
+            text: "Join us in shaping the future of textile engineering",
+          }}
+          action={{
+            label: "About Us",
+            href: "/about",
+          }}
         />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
+        {/* Departments Section */}
+        <DepartmentsSection
+          title="Department"
+          description="Our college has four departments, each focusing on a specific area of study."
+          departments={departments}
+          className="bg-slate-50"
+        />
+
+        {/* Teachers Section */}
+        <TeachersSection
+          title="Our Teachers"
+          description="Meet the Dedicated Educators of Our College"
+          teachers={teachers}
+          viewAllHref="/teachers"
+        />
+
+        {/* Alumni Section */}
+        <AlumniSection
+          title="Our Alumni"
+          description="Inspiring Journeys of Success and Leadership"
+          profiles={alumni}
+          viewAllHref="/alumni"
+          className="bg-slate-50"
+        />
+
+        {/* Clubs Section */}
+        <ClubsSection
+          title="Our Clubs"
+          description="Explore the Exciting Range of Student Clubs and Activities"
+          clubs={[
+            { icon: "/clubs/1.svg", name: "Debate Club" },
+            { icon: "/clubs/2.svg", name: "Cultural Club" },
+            { icon: "/clubs/3.svg", name: "Sports Club" },
+            { icon: "/clubs/4.svg", name: "Photography Club" },
+            { icon: "/clubs/5.svg", name: "Computer Club" },
+            { icon: "/clubs/6.svg", name: "Science Club" },
+          ]}
+          totalCount={8}
+          viewAllHref="/clubs"
+        />
+
+        {/* Activities Section */}
+        <ActivitiesSection
+          title="Recent Activities"
+          description="Explore the latest events and initiatives that have taken place across our college"
+          activities={activities}
+          viewAllHref="/activities"
+          className="bg-slate-50"
+        />
+
+        {/* FAQ Section */}
+        <FAQSection
+          title="Frequently Asked Questions"
+          description="Visit our frequently asked question to find helpful information"
+          faqs={faqs}
+          helpCard={{
+            title: "Can't locate the answers you need",
+            description: "We are here to help you with any question you need",
+            placeholder: "Write here",
+            buttonText: "Send Now",
+          }}
+        />
       </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+    </>
   );
 }
