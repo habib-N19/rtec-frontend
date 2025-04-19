@@ -40,7 +40,7 @@ const JoinClubSection = () => {
       </div>
 
       {/* Card Wrapper */}
-      <div className="bg-[#FEF5E8] h-[225px] w-full flex items-center justify-center">
+      <div className="bg-[#FEF5E8] h-[225px] w-full flex items-center justify-center mb-5">
         <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 px-4 md:px-0">
           {cardData.map((card, index) => (
             <div
