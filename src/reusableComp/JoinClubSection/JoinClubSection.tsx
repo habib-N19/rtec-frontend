@@ -27,27 +27,27 @@ const cardData = [
 
 const JoinClubSection = () => {
   return (
-    <div className="mb-20">
-      {/* Heading */}
-      <div className="text-center mt-10 mb-20 space-y-4">
+    <div className="min-h-[calc(100vh-91px)] mb-10 lg:mb-0 mt-16">
+      <div className="text-center mt-10 pb-12 space-y-4">
         <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-800">
           Why <span className="text-orange-400">Join</span> the Career Club
         </h3>
-        <p className="text-xs md:text-sm xl:text-lg">
+        <p className="text-xs md:text-sm xl:text-lg px-10 md:px-0">
           Joining the Career Club is your first step toward a successful
           professional future.
         </p>
       </div>
 
-      {/* Card Wrapper */}
-      <div className="bg-[#FEF5E8] h-[225px] w-full flex items-center justify-center mb-5">
-        <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 px-4 md:px-0">
+      <div className="py-4 md:py-0 relative h-full">
+        <div className="bg-[#FEF5E8] h-[550px] sm:h-[480px] md:h-[400px] lg:h-[225px] w-full absolute top-1/2 -translate-y-1/2 -z-[100]" />
+
+        {/* Cards */}
+        <div className="container mx-auto flex flex-wrap justify-center items-center gap-8 px-4 md:px-0 relative z-10">
           {cardData.map((card, index) => (
             <div
               key={index}
-              className="flex flex-col items-center text-center bg-white shadow-sm rounded-md p-4 h-[310px]"
+              className="flex flex-col items-center text-center bg-white shadow-sm rounded-md p-4 h-[310px] w-full sm:w-[300px] md:w-[320px]"
             >
-              {/* Icon */}
               <div className="bg-[#FEF5E8] rounded-md flex items-center justify-center size-16 mb-4">
                 <Image
                   src={card.icon}
@@ -58,20 +58,16 @@ const JoinClubSection = () => {
                 />
               </div>
 
-              {/* Content grows to push button down evenly */}
               <div className="flex flex-col flex-grow items-center space-y-2">
-                {/* Title */}
                 <h3 className="text-xl font-semibold text-gray-800">
                   {card.title}
                 </h3>
-
-                {/* Description */}
                 <p className="text-sm text-gray-600 leading-6">
                   {card.description}
                 </p>
               </div>
 
-              {/* Button (always at bottom) */}
+              {/* Button */}
               <div className="mt-4">
                 <Button variant="outline">Learn More</Button>
               </div>
