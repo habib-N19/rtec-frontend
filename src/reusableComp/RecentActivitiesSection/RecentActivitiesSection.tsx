@@ -14,7 +14,7 @@ const RecentActivitiesSection = () => {
         </p>
       </div>
       <div className="py-4 md:py-0 h-full ">
-        <div className="container h-full mx-auto flex flex-wrap justify-center items-center gap-8 px-4 md:px-0 ">
+        <div className="container h-full mx-auto flex flex-wrap justify-center items-center gap-4 px-4 md:px-0 ">
           {[1, 2, 3].map((card, index) => (
             <ReuseableCard
               key={card}
@@ -24,7 +24,7 @@ const RecentActivitiesSection = () => {
               imageUrl={"https://i.ibb.co.com/QZydqvk/recent-activites-1.png"}
               showButton={false}
               buttonText="Register Now"
-              className="w-full sm:w-[48%] md:w-[40%] lg:w-[31%] "
+              className="w-full sm:w-[48%] md:w-[40%] lg:w-[32%] "
             />
           ))}
         </div>
