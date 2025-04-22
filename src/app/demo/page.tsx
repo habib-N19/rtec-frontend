@@ -1,4 +1,5 @@
 import BannerSection from "@/reusableComp/BannerSection/BannerSection";
+import ClubLeadersSection from "@/reusableComp/ClubLeadersSection/ClubLeadersSection";
 import JoinClubSection from "@/reusableComp/JoinClubSection/JoinClubSection";
 import RecentActivitiesSection from "@/reusableComp/RecentActivitiesSection/RecentActivitiesSection";
 import UpcomingActivitySection from "@/reusableComp/UpcomingActivitySection/UpcomingActivitySection";
@@ -11,6 +12,7 @@ const DemoPage = () => {
       <JoinClubSection />
       <UpcomingActivitySection />
       <RecentActivitiesSection />
+      <ClubLeadersSection />
     </div>
   );
 };
