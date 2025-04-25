@@ -20,7 +20,7 @@ const PillarOfIslam = () => {
           Pillars
         </p>
 
-        <div className="grid grid-cols-1 md:grid-cols-5 gap-6">
+        <div className="flex items-center justify-center gap-8 md:gap-14 lg:gap-20 flex-wrap ">
           {/* Pillars */}
           {pillars.map((item, index) => (
             <div key={index} className="flex flex-col items-center">
