@@ -1,9 +1,12 @@
+import CLubActivityHero from "@/reusableComp/CLubActivityHero/CLubActivityHero";
+import FilterTabs from "@/reusableComp/FilterTabs/FilterTabs";
 import React from "react";
 
 const page = () => {
   return (
-    <div>
-      <h4>HEllo</h4>
+    <div className="container mx-auto">
+      <CLubActivityHero />
+      <FilterTabs />
     </div>
   );
 };
