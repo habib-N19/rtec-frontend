@@ -3,6 +3,7 @@ import Image from "next/image";
 import gallery1 from "@/assets/gallery-one.png";
 import gallery2 from "@/assets/gallery-two.png";
 import gallery3 from "@/assets/gallery-three.png";
+import { Button } from "@/components/ui/button";
 
 const OurGallerySection = () => {
   return (
@@ -86,6 +87,12 @@ const OurGallerySection = () => {
             />
           </div>
         </div>
+      </div>
+      {/* View more btn */}
+      <div className="flex items-center justify-center mt-2 mb-10">
+        <Button className="rounded-sm px-8 py-5 md:py-6 text-sm cursor-pointer ">
+          View More
+        </Button>
       </div>
     </div>
   );
