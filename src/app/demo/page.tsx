@@ -1,3 +1,4 @@
+import AboutSection from "@/reusableComp/AboutSection/AboutSection";
 import BannerSection from "@/reusableComp/BannerSection/BannerSection";
 import ClubLeadersSection from "@/reusableComp/ClubLeadersSection/ClubLeadersSection";
 import FAQSection from "@/reusableComp/FAQSection/FAQSection";
@@ -6,7 +7,6 @@ import OurGallerySection from "@/reusableComp/OurGallerySection/OurGallerySectio
 import RecentActivitiesSection from "@/reusableComp/RecentActivitiesSection/RecentActivitiesSection";
 import SponsorForm from "@/reusableComp/SponsorForm/SponsorForm";
 import UpcomingActivitySection from "@/reusableComp/UpcomingActivitySection/UpcomingActivitySection";
-import React from "react";
 
 const DemoPage = () => {
   return (
@@ -19,6 +19,7 @@ const DemoPage = () => {
       <OurGallerySection />
       <SponsorForm />
       <FAQSection />
+      <AboutSection />
     </div>
   );
 };
