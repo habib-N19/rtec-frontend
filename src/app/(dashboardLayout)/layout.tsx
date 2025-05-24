@@ -1,14 +1,20 @@
+"use client";
+
 import { AppSidebar } from "@/components/app-sidebar";
 import { SiteHeader } from "@/components/site-header";
 import { SidebarInset, SidebarProvider } from "@/components/ui/sidebar";
+import { usePathname } from "next/navigation";
 import React from "react";
 
 const DashboardLayout = ({ children }: { children: React.ReactNode }) => {
+  const path = usePathname();
+
+  const pathName = path.split("/")[1];
   return (
     <SidebarProvider>
       <AppSidebar variant="inset" />
       <SidebarInset className="inset-shadow-none rounded-none">
-        <SiteHeader />
+        <SiteHeader path={pathName} />
 
         <div className="flex flex-1 flex-col">
           <div className="@container/main flex flex-1 flex-col gap-2">

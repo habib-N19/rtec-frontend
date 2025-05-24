@@ -35,8 +35,7 @@ import dashLogo from "@/assets/dash-logo.png";
 import Image from "next/image";
 import Link from "next/link";
 import userLogo from "@/assets/profile.png";
-
-const data = {
+export const data = {
   user: {
     name: "Md. Jubayer Sarker",
     email: "jubayersarker@gmail.com",

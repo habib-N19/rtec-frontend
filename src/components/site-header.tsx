@@ -1,3 +1,5 @@
+"use client";
+
 import { Separator } from "@/components/ui/separator";
 import { SidebarTrigger } from "@/components/ui/sidebar";
 import { Avatar, AvatarFallback, AvatarImage } from "./ui/avatar";
@@ -6,7 +8,7 @@ import { Avatar, AvatarFallback, AvatarImage } from "./ui/avatar";
 import profileIcon from "@/assets/profile.png";
 import { Bell, Sun } from "lucide-react";
 
-export function SiteHeader() {
+export function SiteHeader({ path }: { path: string }) {
   return (
     <header className="group-has-data-[collapsible=icon]/sidebar-wrapper:h-12 flex h-12 shrink-0 items-center gap-2 border-b transition-[width,height] ease-linear">
       <div className="flex justify-between items-center w-full mr-5">
@@ -16,7 +18,7 @@ export function SiteHeader() {
             orientation="vertical"
             className="mx-2 data-[orientation=vertical]:h-4"
           />
-          <h1 className="text-base font-medium">Documents</h1>
+          <h1 className=" font-medium capitalize text-2xl">{path}</h1>
         </div>
         <div className="flex items-center gap-2">
           <Avatar className="size-8  border cursor-pointer ">
