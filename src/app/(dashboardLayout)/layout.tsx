@@ -12,8 +12,8 @@ const DashboardLayout = ({ children }: { children: React.ReactNode }) => {
   const pathName = path.split("/")[1];
   return (
     <SidebarProvider>
-      <AppSidebar variant="inset" />
-      <SidebarInset className="inset-shadow-none rounded-none">
+      <AppSidebar />
+      <SidebarInset className="!shadow-none !rounded-none ">
         <SiteHeader path={pathName} />
 
         <div className="flex flex-1 flex-col">

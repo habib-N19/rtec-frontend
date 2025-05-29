@@ -109,7 +109,7 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
       {...props}
       className="shadow-xl rounded-xl"
     >
-      <SidebarHeader className="border-b">
+      <SidebarHeader className="border-b !mx-2 ">
         <SidebarMenu>
           <SidebarMenuItem>
             <SidebarMenuButton
