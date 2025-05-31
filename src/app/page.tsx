@@ -7,12 +7,7 @@ import { AlumniSection } from "@/features/alumni/alumni-section";
 import { ClubsSection } from "@/features/clubs/clubs-section";
 import { ActivitiesSection } from "@/features/activities/activities-section";
 import { FAQSection } from "@/features/faq/faq-section";
-import {
-  BeakerIcon,
-  ShirtIcon,
-  ScissorsIcon,
-  Boxes
-} from "lucide-react";
+import { BeakerIcon, ShirtIcon, ScissorsIcon, Boxes } from "lucide-react";
 
 // Sample data
 const departments = [
@@ -111,30 +106,35 @@ const activities = [
 const faqs = [
   {
     question: "What is the admission process for the textile program?",
-    answer: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    answer:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
   },
   {
     question: "Is there any entrance exam required for admission?",
-    answer: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    answer:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
   },
   {
     question: "What subjects will I study in the textile program?",
-    answer: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    answer:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
   },
   {
     question: "Are there any scholarships available for textile students?",
-    answer: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    answer:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
   },
   {
     question: "Are there any internship opportunities during the program?",
-    answer: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    answer:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
   },
   {
     question: "What facilities are available for textile students on campus?",
-    answer: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    answer:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
   },
 ];
-
 
 export default function Home() {
   return (

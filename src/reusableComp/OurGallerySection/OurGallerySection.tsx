@@ -3,6 +3,7 @@ import Image from "next/image";
 import gallery1 from "@/assets/gallery-one.png";
 import gallery2 from "@/assets/gallery-two.png";
 import gallery3 from "@/assets/gallery-three.png";
+import { Button } from "@/components/ui/button";
 
 const OurGallerySection = () => {
   return (
@@ -20,7 +21,8 @@ const OurGallerySection = () => {
       {/* Gallery Section */}
       <div className="container mx-auto pb-5">
         <div className="grid grid-cols-12 grid-rows-12 lg:grid-rows-10 gap-4 px-4 md:px-0 h-screen">
-          <div className="rounded-md col-span-6 md:col-span-4 row-span-3 md:row-span-3 lg:row-span-3 hover:scale-105 transition-transform ease-in-out duration-300 cursor-pointer ">
+          <div className="rounded-md col-span-6 md:col-span-4 row-span-3 md:row-span-3 lg:row-span-3 hover:scale-105 transition-transform ease-in-out duration-300 cursor-pointer relative group overflow-hidden">
+            <div className="absolute top-0 left-0 w-full h-full bg-black rounded-md opacity-60 group-hover:-translate-x-full transition-all duration-300 ease-linear"></div>
             <Image
               src={gallery3}
               alt="Gallery Image 1"
@@ -30,7 +32,8 @@ const OurGallerySection = () => {
             />
           </div>
 
-          <div className="rounded-md col-span-6 md:col-span-4 row-span-3 md:row-span-5 lg:row-span-6 hover:scale-105 transition-transform ease-in-out duration-300 cursor-pointer">
+          <div className="relative rounded-md col-span-6 md:col-span-4 row-span-3 md:row-span-5 lg:row-span-6 hover:scale-105 transition-transform ease-in-out duration-300 cursor-pointer group overflow-hidden">
+            <div className="absolute top-0 left-0 w-full h-full bg-black rounded-md opacity-60 group-hover:-translate-y-full transition-all duration-300 ease-linear"></div>
             <Image
               src={gallery1}
               alt="Gallery Image 1"
@@ -40,7 +43,8 @@ const OurGallerySection = () => {
             />
           </div>
 
-          <div className="rounded-md col-span-12 md:col-span-4 row-span-3 md:row-span-7 lg:row-span-4 hover:scale-105 transition-transform ease-in-out duration-300 cursor-pointer">
+          <div className="relative rounded-md col-span-12 md:col-span-4 row-span-3 md:row-span-7 lg:row-span-4 hover:scale-105 transition-transform ease-in-out duration-300 cursor-pointer group overflow-hidden">
+            <div className="absolute top-0 left-0 w-full h-full bg-black rounded-md opacity-60 group-hover:-translate-y-full transition-all duration-300 ease-linear"></div>
             <Image
               src={gallery2}
               alt="Gallery Image 1"
@@ -50,7 +54,8 @@ const OurGallerySection = () => {
             />
           </div>
 
-          <div className="rounded-md col-span-6 md:col-span-4 row-span-3 md:row-span-7 lg:row-span-7 hover:scale-105 transition-transform ease-in-out duration-300 cursor-pointer">
+          <div className="relative rounded-md col-span-6 md:col-span-4 row-span-3 md:row-span-7 lg:row-span-7 hover:scale-105 transition-transform ease-in-out duration-300 cursor-pointer group overflow-hidden">
+            <div className="absolute top-0 left-0 w-full h-full bg-black rounded-md opacity-60 group-hover:translate-y-full transition-all duration-300 ease-linear"></div>
             <Image
               src={gallery1}
               alt="Gallery Image 1"
@@ -60,7 +65,8 @@ const OurGallerySection = () => {
             />
           </div>
 
-          <div className=" lg:order-5 rounded-md bg-red-600 col-span-6 md:col-span-4 row-span-3 md:row-span-5 lg:row-span-4 hover:scale-105 transition-transform ease-in-out duration-300 cursor-pointer">
+          <div className="relative lg:order-5 rounded-md bg-red-600 col-span-6 md:col-span-4 row-span-3 md:row-span-5 lg:row-span-4 hover:scale-105 transition-transform ease-in-out duration-300 cursor-pointer group overflow-hidden">
+            <div className="absolute top-0 left-0 w-full h-full bg-black rounded-md opacity-60 group-hover:-translate-y-full transition-all duration-300 ease-linear"></div>
             <Image
               src={gallery3}
               alt="Gallery Image 1"
@@ -70,7 +76,8 @@ const OurGallerySection = () => {
             />
           </div>
 
-          <div className="rounded-md col-span-12 md:col-span-4 row-span-3 lg:row-span-6 hover:scale-105 transition-transform ease-in-out duration-300 cursor-pointer">
+          <div className="relative rounded-md col-span-12 md:col-span-4 row-span-3 lg:row-span-6 hover:scale-105 transition-transform ease-in-out duration-300 cursor-pointer group overflow-hidden">
+            <div className="absolute top-0 left-0 w-full h-full bg-black rounded-md opacity-60 group-hover:translate-y-full transition-all duration-300 ease-linear"></div>
             <Image
               src={gallery2}
               alt="Gallery Image 1"
@@ -80,6 +87,12 @@ const OurGallerySection = () => {
             />
           </div>
         </div>
+      </div>
+      {/* View more btn */}
+      <div className="flex items-center justify-center mt-2 mb-10">
+        <Button className="rounded-sm px-8 py-5 md:py-6 text-sm cursor-pointer ">
+          View More
+        </Button>
       </div>
     </div>
   );
